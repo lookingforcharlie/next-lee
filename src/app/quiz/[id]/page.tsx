@@ -61,11 +61,11 @@ export default async function QuizPage({
   params,
   searchParams,
 }: {
-  params: { id: string }
-  searchParams: { show?: string }
+  params: Promise<{ id: string }>
+  searchParams?: Promise<{ show?: string }>
 }) {
   const { id } = await params
-  const { show } = await searchParams
+  const { show } = (await searchParams) ?? {}
 
   return (
     <section>
