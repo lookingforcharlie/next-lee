@@ -31,7 +31,10 @@ async function Quizzes() {
 
 export default function Home() {
   return (
-    <section className='gap-4'>
+    <section className='flex flex-col gap-4'>
+      <Link href='/promise'>Promise</Link>
+      <Link href='/api-tester'>Api Tester</Link>
+
       <h1 className='text-2xl font-semibold text-amber-600 mb-4'>
         All Quizzes
       </h1>

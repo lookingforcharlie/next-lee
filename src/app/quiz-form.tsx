@@ -1,4 +1,5 @@
 // 'use client'
+import Button from '@/components/Button'
 import { revalidatePath } from 'next/cache'
 import postgres from 'postgres'
 
@@ -137,12 +138,15 @@ export default function QuizForm() {
         <AnswerInput id={3} />
         <AnswerInput id={4} />
 
-        <button
+        {/* <button
           type='submit'
-          className='border border-amber-300 mt-4 bg-amber-600 text-white px-4 py-2 rounded-md cursor-pointer'
+          className='border border-amber-300 mt-4 bg-amber-600 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-amber-700'
         >
           Create Quiz
-        </button>
+        </button> */}
+        <Button type='submit' className='mt-4'>
+          Create Quiz
+        </Button>
       </form>
     </div>
   )
